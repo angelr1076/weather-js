@@ -54,17 +54,18 @@ h1 {
     display: grid;
     grid-column: 2 / 4;
     grid-row: 3 / 4;
-    border-radius: 3px;
-    opacity: 0.8;
-    width: 40%;
-    height: 60%;
+    border-radius: 4px;
+    background: black;
+    color: rgb(216, 196, 14);
+    width: 42%;
+    height: 62%;
     justify-self: center;
 }
 
 #toggle:active {
-    width: 38%;
-    height: 58%;
-    font-size: 45%;
+    width: 40%;
+    height: 60%;
+    font-size: 30%;
 }
 
 #time {
