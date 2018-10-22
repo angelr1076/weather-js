@@ -55,7 +55,7 @@ h1 {
     grid-column: 2 / 4;
     grid-row: 3 / 4;
     border-radius: 4px;
-    background: black;
+    background: rgb(167, 37, 139);
     color: rgb(216, 196, 14);
     width: 42%;
     height: 62%;
