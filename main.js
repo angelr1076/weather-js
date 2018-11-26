@@ -1,20 +1,20 @@
-let userLocation = document.querySelector("#location"),
-    weatherTemp = document.querySelector("#temperature"),
-    weatherDesc = document.querySelector("#description"),
-    weatherIcon = document.querySelector("#weatherIcon"),
-    scale = document.querySelector("#scale"),
-    currentTime = document.querySelector("#time"),
-    toggleButton = document.querySelector("#toggle");
+let userLocation = document.querySelector("#location");
+let weatherTemp = document.querySelector("#temperature");
+let weatherDesc = document.querySelector("#description");
+let weatherIcon = document.querySelector("#weatherIcon");
+const scale = document.querySelector("#scale");
+const currentTime = document.querySelector("#time");
+const toggleButton = document.querySelector("#toggle");
 
-window.onload = function() {
+window.onload = () => {
 
-    function getTime() {
+    const getTime = () => {
         let date = new Date();
         let time = date.toLocaleString();
         currentTime.innerHTML = time;
     }
 
-    function fetchLocation() {
+    const fetchLocation = () => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(position => {
                 fetchWeather(position.coords.latitude, position.coords.longitude);
@@ -23,7 +23,7 @@ window.onload = function() {
             userLocation.innerHTML = "Sorry, but your browser does not support Geolocation data";
         }
 
-    function fetchWeather(lat, long) {
+    const fetchWeather = (lat, long) => {
         const api = "https://fcc-weather-api.glitch.me/api/current?";
         fetch(`${api}lat=${lat}&lon=${long}`, { method: "GET" })
         .then(response => response.json())
@@ -33,9 +33,9 @@ window.onload = function() {
         .catch(err => console.log(err));
     }
 
-    function updateUserData(location, weather, temp) {
-        let fTemp = Math.round((`${temp}` * 9/5)+ 32) + "°F";
-        let cTemp = `${temp} °C`;
+    const updateUserData = (location, weather, temp) => {
+        const fTemp = `${Math.round((`${temp}` * 9/5)+ 32)}°F`;
+        const cTemp = `${temp} °C`;
         let tempSwap = true;
         userLocation.innerHTML = location;
         weatherTemp.innerHTML = fTemp;
