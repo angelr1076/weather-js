@@ -3,16 +3,20 @@ let weatherTemp = document.querySelector("#temperature");
 let weatherDesc = document.querySelector("#description");
 let weatherIcon = document.querySelector("#weatherIcon");
 const scale = document.querySelector("#scale");
-const currentTime = document.querySelector("#time");
+let currentTime = document.querySelector("#time");
 const toggleButton = document.querySelector("#toggle");
 
 window.onload = () => {
 
     const getTime = () => {
-        let date = new Date();
-        let time = date.toLocaleString();
-        currentTime.innerHTML = time;
+        let time = new Date();
+        let newTime =   time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+        currentTime = '';
+        currentTime.append(newTime);
     }
+
+    let updateClock = setInterval(getTime ,1000);
+
 
     const fetchLocation = () => {
         if (navigator.geolocation) {
