@@ -6,18 +6,7 @@ const scale = document.querySelector("#scale");
 let currentTime = document.querySelector("#time");
 const toggleButton = document.querySelector("#toggle");
 
-window.onload = () => {
-
-    const getTime = () => {
-        let time = new Date();
-        let newTime =   time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
-        currentTime = '';
-        currentTime.append(newTime);
-    }
-
-    let updateClock = setInterval(getTime ,1000);
-
-
+const getWeather = () => {
     const fetchLocation = () => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(position => {
@@ -60,5 +49,16 @@ window.onload = () => {
     }
 }
     fetchLocation();
-    getTime();
 }
+
+const setDate = () => {
+    const now = new Date();
+    const newTime = now.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
+    currentTime.innerHTML = newTime;
+}
+
+getWeather();
+setInterval(setDate , 1000);
+
+
+

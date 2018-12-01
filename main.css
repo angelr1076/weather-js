@@ -70,13 +70,13 @@ h1 {
     font-weight: 900;
     border: 5px solid rgb(209, 212, 14);
     width: 50%;
-    height: 55%;
+    height: 60%;
     justify-self: center;
 }
 
 #toggle:active {
     width: 48%;
-    height: 54%;
+    height: 59%;
     font-size: 18px;
 }
 
