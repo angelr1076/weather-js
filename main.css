@@ -5,10 +5,10 @@
 body {
     margin: 0 auto;
     width: 990px;
-    background: #114357;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #F29492, #114357);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #F29492, #114357); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: rgb(216, 196, 14);
+    color: white;
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-family: 'Black Han Sans', sans-serif;
     font-size: 30px;
     height: 100%;
@@ -62,22 +62,24 @@ h1 {
     grid-row: 3 / 4;
     border-radius: 4px;
     border: none;
-    background: #f7ff00;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #db36a4, #f7ff00);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #db36a4, #f7ff00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: rgb(15, 15, 14);
+    background-color: rgb(14, 14, 196);
+    color: rgb(248, 248, 239);
     font-size: 20px;
     font-weight: 900;
-    border: 5px solid rgb(209, 212, 14);
-    width: 50%;
-    height: 60%;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
     justify-self: center;
 }
 
+#toggle:hover {
+    background-color: rgb(65, 124, 201);
+}
+
 #toggle:active {
-    width: 48%;
-    height: 59%;
     font-size: 18px;
+    height: 99px;
+    width: 99px;
 }
 
 #time {
@@ -89,7 +91,7 @@ h1 {
 
 @media all and (max-width: 800px) {
     body {
-        width: 600px;
+        width: 50%;
     }
 
     #location, #temperature, #description, #weatherIcon, #time {
@@ -101,12 +103,13 @@ h1 {
     }
 
     #toggle {
-        width: 50%;
+        width: 65%;
     }
 
     h1 {
-        font-size: 30px;
-        margin-right: 33%;
+        font-size: 25px;
+        margin-left: 15%;
+        letter-spacing: 5px;
     }
 
     .container {
