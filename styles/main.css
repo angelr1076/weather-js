@@ -14,6 +14,11 @@ body {
     height: 100%;
 }
 
+hr {
+    height: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
 .container {
     display: grid;
     grid-gap: 10px;
