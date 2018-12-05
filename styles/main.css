@@ -29,6 +29,7 @@ hr {
 h1 {
     text-align: center;
     margin-top: 6%;
+    color: rgb(223, 223, 15);
 }
 
 #location {
@@ -51,7 +52,6 @@ h1 {
     display: grid;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    justify-content: center;
 }
 
 #weatherIcon {
@@ -103,18 +103,13 @@ h1 {
         font-size: 20px;
     }
 
-    h1 {
-        margin-left: 33%;
-    }
-
     #toggle {
         width: 65%;
     }
 
     h1 {
         font-size: 25px;
-        margin-left: 15%;
-        letter-spacing: 5px;
+        letter-spacing: 8px;
     }
 
     .container {
